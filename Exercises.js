@@ -43,19 +43,63 @@ function allCaps(str) {
 //Question 4
 function myPower(x, n) {
   // your code here
-  return "";
+  return Math.pow(x, n);
 }
 
 //Question 5
 function getFirstNotRepeating(str) {
   // your code here
-  return "";
+
+  if (str === "")
+    return "The String is empty and there are no repeats.";
+  for (let i = 0; i < str.length; i++) {
+    if (indexOf(str[i] === lastIndexOf(str[i])))
+      return str[i];
+  }
+  /**
+    // more efficient way to write this
+    let arr = [];
+    for (let i = 0; i < str.length; i++) {
+      arr[i] = false;
+    }
+  
+    let foundDuplicate = false;
+    let i = 0;
+    while (i < str.length - 1) {
+      for (let j = i + 1; j < str.length; j++) {
+        //look for duplicates of str[i], mark them 'true' if any are found
+        if (str[i] === str[j]) {
+          arr[j] = true;
+          foundDuplicate = true;
+        }
+      }
+      if (!foundDuplicate) { // no duplicate for str[i]
+        return str[i];
+      }
+      // duplicates were found, prepare for next loop execution. 
+      arr[i] = true;
+      foundDuplicate = false;
+      while (arr[i])//move i to the next letter that was not already inspected.
+        i++;
+    }
+   */
+  return "All characters are repeated.";
 }
 
 //Question 6 (Bonus)
 function isPrefectNumber(num) {
   // your code here
-  return "I'm not interested in the bonus question :(";
+  let sum = 1;
+  for (let i = 2; i <= num / i; i++) {
+    if (num % i === 0) {
+      sum += i;
+      if (i !== num / i)
+        sum += num / i;
+    }
+  }
+  if (sum === num)
+    return num + " is a perfect number";
+  return num + " is not a perfect number";
 }
 
 // *** Playground ***
