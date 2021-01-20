@@ -7,7 +7,7 @@
 - Fork and clone this repo to your computer
 - Open vs-code. In the terminal `ctrl + j` type `npm i` and press enter
 - Add a file named `.gitignore` and type in this: `node_modules`
-- Now the `node_modules` folder should be greyd out
+- Now the `node_modules` folder should be greyed out
 
 Congratulations 🎉
 
