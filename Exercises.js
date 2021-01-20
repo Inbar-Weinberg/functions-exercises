@@ -24,7 +24,20 @@ function allCombinations(str) {
 //Question 3
 function allCaps(str) {
   // your code here
-  return "";
+  if (str === "")
+    return str; // no point in working with empty string.
+
+  // first replace the first letter of the sentence without space before it.
+  // this will only replace the first letter because the use of a value and not a literal String.
+  str = str.replace(str[0], str[0].toUpperCase());
+
+  for (let i = 1; i < str.length; i++) {
+    if (str[i] === " ") {
+      i++
+      str = str.replace(" " + str[i], " " + str[i].toUpperCase());
+    }
+  }
+  return str;
 }
 
 //Question 4
