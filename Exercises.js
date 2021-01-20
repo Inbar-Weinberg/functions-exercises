@@ -3,7 +3,7 @@ function myReverse(str) {
   // your code here
   let reversed = "";
   for (let i = 0; i < str.length; i++) {
-    reversed += str[length - i - 1];
+    reversed += str[str.length - i - 1];
   }
   return reversed;
 }
@@ -53,7 +53,7 @@ function getFirstNotRepeating(str) {
   if (str === "")
     return "The String is empty and there are no repeats.";
   for (let i = 0; i < str.length; i++) {
-    if (indexOf(str[i] === lastIndexOf(str[i])))
+    if (str.indexOf(str[i]) === str.lastIndexOf(str[i]))
       return str[i];
   }
   /**
@@ -98,8 +98,8 @@ function isPrefectNumber(num) {
     }
   }
   if (sum === num)
-    return num + " is a perfect number";
-  return num + " is not a perfect number";
+    return true;
+  return false;
 }
 
 // *** Playground ***
