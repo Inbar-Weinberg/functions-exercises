@@ -49,7 +49,6 @@ function myPower(x, n) {
 //Question 5
 function getFirstNotRepeating(str) {
   // your code here
-
   if (str === "")
     return "The String is empty and there are no repeats.";
   for (let i = 0; i < str.length; i++) {
@@ -82,7 +81,7 @@ function getFirstNotRepeating(str) {
       while (arr[i])//move i to the next letter that was not already inspected.
         i++;
     }
-   */
+*/
   return "All characters are repeated.";
 }
 
@@ -104,7 +103,6 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-
 
 // *** End of Playground ***
 
