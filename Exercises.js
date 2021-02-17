@@ -87,7 +87,7 @@ function getFirstNotRepeating(str) {
 
 //Question 6 (Bonus)
 function isPrefectNumber(num) {
-  // your code here
+  // your code here 
   let sum = 1;
   for (let i = 2; i <= num / i; i++) {
     if (num % i === 0) {
@@ -99,6 +99,7 @@ function isPrefectNumber(num) {
   if (sum === num)
     return true;
   return false;
+
 }
 
 // *** Playground ***
